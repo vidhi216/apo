@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You Mad?</title>
+  <style>
+    body {
+      background-color: #ffe6e9;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #ff6f61;
+      margin-top: 100px;
+    }
+    .buttons {
+      margin-top: 30px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    #yes {
+      background-color: #ff9999;
+      color: white;
+    }
+    #no {
+      background-color: #9fff9f;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Are you still mad at me?</h1>
+  <div class="buttons">
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+  </div>
+
+  <script>
+    const yesButton = document.getElementById('yes');
+    const noButton = document.getElementById('no');
+
+    yesButton.addEventListener('mouseenter', () => {
+      yesButton.style.position = 'absolute';
+      yesButton.style.top = `${Math.random() * 80 + 10}%`;
+      yesButton.style.left = `${Math.random() * 80 + 10}%`;
+    });
+
+    noButton.addEventListener('click', () => {
+      window.location.href = 'apology.html';
+    });
+  </script>
+</body>
+</html>
